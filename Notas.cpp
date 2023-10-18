@@ -14,10 +14,12 @@ int main()
 {
 	char User[30];
 	char KeyWord[30];
+	char Nombre[50];
+	char Recuperacion[100];
 	int Ingresar,editar;
 	int Opcion;
     float Promedio,Nota1,Nota2,Nota3;
-    char Nombre[50];
+    
     
     
     	printf("\n\t\t\t SIGN IN \n");
@@ -56,11 +58,26 @@ int main()
 		                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
 		                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
 		                
-		                break;
+						if (Promedio <= 3.0) {
+							printf("\ndesea dejar una recuperacion? 1/si 2/no\n");
+							scanf("%i", &Opcion);
+						    switch (Opcion) {
+						    	
+						    		case 1:
+						    			printf("\nINgrese el trabajo menos de 100 caracteres:");
+						                fflush(stdin);
+						                scanf("%s", &Recuperacion);
+						                break;;
+						            case 2:
+						            	printf("\nQue tenga buen dia:");
+						            	break;
+							}
+						}
+		                
 		                
 		                
 		        
+					}
 			}
 		}
-}
 }
