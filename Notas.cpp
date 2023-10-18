@@ -20,18 +20,20 @@ int main()
     
     
     	printf("\n\t\t\t SIGN IN \n");
-		printf("\n Ingrese su Usuario:");
+		printf("\n Ingrese su Usuario:");//1
 		scanf("%s",User);
 		
 		printf("\n Ingrese su Contraseña:");
 		scanf("%s",KeyWord);
 		
-		if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Preset) == 0)
-		
+		if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){
+		 printf("\nSistema Asis\n");
 			while(1){
-						        printf("\nBienvenido a su Cajero\n");
 		        printf("1. Ingresar Datos del Estudiante\n");
 		        printf("2. Editar notas\n");
 		        scanf("%i", &Opcion);
+		        
+		        
 			}
+		}
 }
