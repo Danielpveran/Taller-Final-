@@ -16,12 +16,12 @@ int main()
 	char KeyWord[30];
 	int Ingresar,editar;
 	int Opcion;
-    float Promedio;
-    char Nombre;
+    float Promedio,Nota1,Nota2,Nota3;
+    char Nombre[50];
     
     
     	printf("\n\t\t\t SIGN IN \n");
-		printf("\n Ingrese su Usuario:");//1
+		printf("\n Ingrese su Usuario:");
 		scanf("%s",User);
 		
 		printf("\n Ingrese su Contraseña:");
@@ -31,23 +31,36 @@ int main()
 		 printf("\nSistema Asis\n");
 			while(1){
 		        printf("1. Ingresar Datos del Estudiante\n");
-		        printf("2. Editar notas\n");
+		        printf("2. Salir\n");
 		        scanf("%i", &Opcion);
 		        
 		        	switch (Opcion) {
 		        		
 		            case 1:
-		                printf("\nNombre del estudiante ");
-		                scanf("%S", &Nombre);
+		                printf("\nNombre del estudiante:");
+		                fflush(stdin);
+		                scanf("%s", &Nombre);
 		                
-		                printf("Ingrese la Nota del 1 Corte");
-		                scanf("%f", &Nota1);
-		                printf("Ingrese la Nota del 2 Corte");
+		                printf("Ingrese la Nota del 1 Corte:\n");
+		                fflush(stdin);
+		               	scanf("%f", &Nota1);
+		                
+		                printf("Ingrese la Nota del 2 Corte:\n");
+		                fflush(stdin);
 		                scanf("%f", &Nota2);
-		                printf("Ingrese la Nota del 3 Corte");
+		                
+		                printf("Ingrese la Nota del 3 Corte:\n");
+		                fflush(stdin);
 		                scanf("%f", &Nota3);
+		                
+		                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
+		                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
+		                
 		                break;
+		                
+		                
 		        
 			}
 		}
+}
 }
