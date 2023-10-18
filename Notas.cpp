@@ -17,6 +17,7 @@ int main()
 	int Ingresar,editar;
 	int Opcion;
     float Promedio;
+    char Nombre;
     
     
     	printf("\n\t\t\t SIGN IN \n");
@@ -33,6 +34,19 @@ int main()
 		        printf("2. Editar notas\n");
 		        scanf("%i", &Opcion);
 		        
+		        	switch (Opcion) {
+		        		
+		            case 1:
+		                printf("\nNombre del estudiante ");
+		                scanf("%S", &Nombre);
+		                
+		                printf("Ingrese la Nota del 1 Corte");
+		                scanf("%f", &Nota1);
+		                printf("Ingrese la Nota del 2 Corte");
+		                scanf("%f", &Nota2);
+		                printf("Ingrese la Nota del 3 Corte");
+		                scanf("%f", &Nota3);
+		                break;
 		        
 			}
 		}
