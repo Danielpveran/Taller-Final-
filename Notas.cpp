@@ -21,7 +21,7 @@ int main()
     float Promedio,Nota1,Nota2,Nota3;
     
     
-    
+    while(1){
     	printf("\n\t\t\t SIGN IN \n");
 		printf("\n Ingrese su Usuario:");
 		scanf("%s",User);
@@ -31,7 +31,7 @@ int main()
 		
 		if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){
 		 printf("\nSistema Asis\n");
-			while(1){
+			
 		        printf("1. Ingresar Datos del Estudiante\n");
 		        printf("2. Salir\n");
 		        scanf("%i", &Opcion);
@@ -64,10 +64,10 @@ int main()
 						    switch (Opcion) {
 						    	
 						    		case 1:
-						    			printf("\nINgrese el trabajo menos de 100 caracteres:");
+						    			printf("\nIngrese el trabajo menos de 100 caracteres:");
 						                fflush(stdin);
 						                scanf("%s", &Recuperacion);
-						                break;;
+						                break;
 						            case 2:
 						            	printf("\nQue tenga buen dia:");
 						            	break;
