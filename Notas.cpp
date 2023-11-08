@@ -7,7 +7,7 @@
 
 #define User_Student_Preset "0987654321"
 
-#define KeyWord_Preset "1234"
+#define KeyWord_Preset "1234"'+++++++
 
 
 int main()
@@ -38,43 +38,51 @@ int main()
 		        
 		        	switch (Opcion) {
 		        		
-		            case 1:
-		                printf("\nNombre del estudiante:");
-		                fflush(stdin);
-		                scanf("%s", &Nombre);
-		                
-		                printf("Ingrese la Nota del 1 Corte:\n");
-		                fflush(stdin);
-		               	scanf("%f", &Nota1);
-		                
-		                printf("Ingrese la Nota del 2 Corte:\n");
-		                fflush(stdin);
-		                scanf("%f", &Nota2);
-		                
-		                printf("Ingrese la Nota del 3 Corte:\n");
-		                fflush(stdin);
-		                scanf("%f", &Nota3);
-		                
-		                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
-		                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
-		                
-						if (Promedio <= 3.0) {
-							printf("\ndesea dejar una recuperacion? 1/si 2/no\n");
-							scanf("%i", &Opcion);
-						    switch (Opcion) {
-						    	
-						    		case 1:
-						    			printf("\nIngrese el trabajo menos de 100 caracteres:");
-						                fflush(stdin);
-						                scanf("%s", &Recuperacion);
-						                break;
-						            case 2:
-						            	printf("\nQue tenga buen dia:");
-						            	break;
+			            case 1:
+			                printf("\nNombre del estudiante:");
+			                fflush(stdin);
+			                scanf("%s", &Nombre);
+			                
+			                printf("Ingrese la Nota del 1 Corte:\n");
+			                fflush(stdin);
+			               	scanf("%f", &Nota1);
+			                
+			                printf("Ingrese la Nota del 2 Corte:\n");
+			                fflush(stdin);
+			                scanf("%f", &Nota2);
+			                
+			                printf("Ingrese la Nota del 3 Corte:\n");
+			                fflush(stdin);
+			                scanf("%f", &Nota3);
+			                
+			                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
+			                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
+			                
+							if (Promedio <= 3.0) {
+								printf("\ndesea dejar una recuperacion? 1/si 2/no\n");
+								scanf("%i", &Opcion);
+							    switch (Opcion) {
+							    	
+							    		case 1:
+							    			printf("\nIngrese el trabajo menos de 100 caracteres:");
+							                fflush(stdin);
+							                scanf("%s", &Recuperacion);
+							                
+							            case 2:
+							            	printf("\nQue tenga buen dia:");
+							            	break;
+						            	
 							}
 						}
+							
+							else
+							printf("\nQue tenga buen dia:");
+							break;
 		                
-		                
+		                case 2:
+		                	printf("\nQue tenga buen dia:");
+		                	
+		                	break;
 		                
 		        
 					}
