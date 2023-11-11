@@ -32,7 +32,7 @@ int main() {
 			printf("\n Ingrese su Contraseña:");
 			scanf("%s",KeyWord);
 			
-			if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){} //Usuario y clave de maestr
+			if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){ //Usuario y clave de maestro
 			 printf("\nSistema Asis\n");
 				
 			        printf("1. Ingresar Datos del Estudiante\n");
@@ -43,6 +43,7 @@ int main() {
 		        				        		
 			            printf("\nNombre del estudiante:");
 			            scanf("%s", &Nombre);
+			            
 			            if (strcmp(Nombre,User_Daniel_Preset) == 0){ //Se toma en caso de que la Nota se este ingresando al usuario Daniel
 			                
 				            printf("Ingrese la Nota del 1 Corte:\n");
@@ -110,16 +111,23 @@ int main() {
 			}
 			
 			else if (strcmp(User, User_Daniel_Preset) == 0 && strcmp(KeyWord, KeyWord_Daniel_Preset) == 0) { //Usuario y clave de Daniel
-				
-					printf("\nSus Notas son de es de %.1f,%.1f,%.1f", Nota1D,Nota2D,Nota3D); //Se muestran las notas de Daniel
-		        	printf("\nLa Nota final de %s es de %.1f", Nombre, PromedioD); //Se muestra el promedio de estudiante Daniel
+				printf("\nSus Notas son de es de %.1f,%.1f,%.1f", Nota1D,Nota2D,Nota3D); //Se muestran las notas de Daniel
+		        printf("\nLa Nota final de %s es de %.1f", Nombre, PromedioD); //Se muestra el promedio de estudiante Daniel
 			}
 			
-			else if (strcmp(User, User_Daniel_Preset) == 0 && strcmp(KeyWord, KeyWord_Daniel_Preset) == 0) { //Usuario y clave de Andres
-			printf("\nSus Notas son de es de %.1f,%.1f,%.1f", Nota1A,Nota2A,Nota3A); //Se muestran las notas de Andres
-		        printf("\nSu Nota final de es de %.1f", PromedioA); //Se muestra el promedio de estudiante Andres
-		}
+			else if (strcmp(User, User_Andres_Preset) == 0 && strcmp(KeyWord, KeyWord_Andres_Preset) == 0) { //Usuario y clave de Andres
+				printf("\nSus Notas son de es de %.1f,%.1f,%.1f", Nota1A,Nota2A,Nota3A); //Se muestran las notas de Andres
+		    	printf("\nSu Nota final de es de %.1f", PromedioA); //Se muestra el promedio de estudiante Andres
+			}
+			
+			else if (strcmp(User, User_Andres_Preset) == 0 && strcmp(KeyWord, KeyWord_Andres_Preset) == 0) { //Usuario y clave de Juan
+				printf("\nSus Notas son de es de %.1f,%.1f,%.1f", Nota1J,Nota2J,Nota3J); //Se muestran las notas de Juan
+		    	printf("\nSu Nota final de es de %.1f", PromedioJ); //Se muestra el promedio de estudiante Juan
+			}
+			
+			else{
+				printf("\nUsuario o Contraseña incorrecto", PromedioJ);
+			}
 
-
-return 0;	
+	}
 }
