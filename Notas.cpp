@@ -32,8 +32,8 @@ int main() {
 			printf("\n Ingrese su Contraseña:");
 			scanf("%s",KeyWord);
 			
-			if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){ //Usuario y clave de maestro
-			 printf("\nSistema Asis\n");
+			if(strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){ //Usuario y clave de maestro
+			 	printf("\nSistema Asis\n");
 				
 			        printf("1. Ingresar Datos del Estudiante\n");
 			        printf("2. Salir\n");
@@ -129,5 +129,5 @@ int main() {
 				printf("\nUsuario o Contraseña incorrecto", PromedioJ);
 			}
 
-	}
+		}
 }
