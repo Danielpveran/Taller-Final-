@@ -2,14 +2,13 @@
 #include <string.h>
 
 #define User_Teacher_Preset "Geovanny"
-
 #define KeyWord_Teacher_Preset "9485"
 
 #define User_Daniel_Preset "Daniel"
 #define KeyWord_Daniel_Preset "1234"
 
-#define User_Danna_Preset "Andres"
-#define KeyWord_Danna_Preset "1983"
+#define User_Andres_Preset "Andres"
+#define KeyWord_Andres_Preset "1983"
 
 #define User_Juan_Preset "Juan"
 #define KeyWord_Juan_Preset "0987"
@@ -41,25 +40,67 @@ int main() {
 		        scanf("%i", &Opcion);
 		        
 		        	if (Opcion == 1) {
-		        		
-			                printf("\nNombre del estudiante:");
-			                fflush(stdin);
-			                scanf("%s", &Nombre);
+		        				        		
+			            printf("\nNombre del estudiante:");
+			            scanf("%s", &Nombre);
+			            if (strcmp(Nombre,User_Daniel_Preset) == 0){ //Se toma en caso de que la Nota se este ingresando al usuario Daniel
 			                
-			                printf("Ingrese la Nota del 1 Corte:\n");
-			                fflush(stdin);
-			               	scanf("%f", &Nota1);
+				            printf("Ingrese la Nota del 1 Corte:\n");
+				            scanf("%f", &Nota1D);
+				                
+				            printf("Ingrese la Nota del 2 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota2D);
+				                
+				            printf("Ingrese la Nota del 3 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota3D);
+				                
+				            PromedioD = (Nota1D + Nota2D + Nota3D) / 3.0;
+				            printf("\nLa Nota final de %s es de %.1f", Nombre, PromedioD); //Se muestra el promedio de estudiante Daniel
+							}
+							
+						else if(strcmp(Nombre,User_Juan_Preset) == 0){ //Se toma en caso de que la Nota se este ingresando al usuario Juan
 			                
-			                printf("Ingrese la Nota del 2 Corte:\n");
-			                fflush(stdin);
-			                scanf("%f", &Nota2);
+				            printf("Ingrese la Nota del 1 Corte:\n");
+				            scanf("%f", &Nota1J);
+				                
+				            printf("Ingrese la Nota del 2 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota2J);
+				                
+				            printf("Ingrese la Nota del 3 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota3J);
+				                
+				            PromedioJ = (Nota1J + Nota2J + Nota3J) / 3.0;
+				            printf("\nLa Nota final de %s es de %.1f", Nombre, PromedioJ);
+						}
+						
+						else if(strcmp(Nombre,User_Andres_Preset) == 0){ //Se toma en caso de que la Nota se este ingresando al usuario Andres
 			                
-			                printf("Ingrese la Nota del 3 Corte:\n");
-			                fflush(stdin);
-			                scanf("%f", &Nota3);
-			                
-			                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
-			                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio); //Se muestra el promedio de estudiante
+				            printf("Ingrese la Nota del 1 Corte:\n");
+				            scanf("%f", &Nota1A);
+				                
+				            printf("Ingrese la Nota del 2 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota2A);
+				                
+				            printf("Ingrese la Nota del 3 Corte:\n");
+				            fflush(stdin);
+				            scanf("%f", &Nota3A);
+				                
+				            PromedioA = (Nota1A + Nota2J + Nota3J) / 3.0;
+				            printf("\nLa Nota final de %s es de %.1f", Nombre, PromedioA);
+				            
+						}
+						
+						else{
+				            	printf("No hay un Usuario con ese nombre en la base por favor repita\n");
+				            	break;
+				            }
 				}
 		}
+	}
+return 0;
 }
