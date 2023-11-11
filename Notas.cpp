@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
-#define User_Teacher_Preset "1234567890"
+#define User_Teacher_Preset "Geovanny"
 
 #define KeyWord_Teacher_Preset "9485"
 
-#define User_Student_Preset "0987654321"
+#define User_Daniel_Preset "Daniel"
+#define KeyWord_Daniel_Preset "1234"
 
-#define KeyWord_Preset "1234"'+++++++
+#define User_Danna_Preset "Andres"
+#define KeyWord_Danna_Preset "1983"
+
+#define User_Juan_Preset "Juan"
+#define KeyWord_Juan_Preset "0987"
 
 
 int main()
@@ -18,7 +23,7 @@ int main()
 	char Recuperacion[100];
 	int Ingresar,editar;
 	int Opcion;
-    float Promedio,Nota1,Nota2,Nota3;
+    float PromedioD,Nota1D,Nota2D,Nota3D,PromedioA,Nota1A,Nota2A,Nota3A,PromedioJ,Nota1J,Nota2J,Nota3J;
     
     
     while(1){
@@ -29,14 +34,14 @@ int main()
 		printf("\n Ingrese su Contraseña:");
 		scanf("%s",KeyWord);
 		
-		if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){
+		if (strcmp(User, User_Teacher_Preset) == 0 && strcmp(KeyWord, KeyWord_Teacher_Preset) == 0){ //En Caso de que el usuario y clave sea los del profesor
 		 printf("\nSistema Asis\n");
 			
 		        printf("1. Ingresar Datos del Estudiante\n");
 		        printf("2. Salir\n");
 		        scanf("%i", &Opcion);
 		        
-		        	switch (Opcion) {
+		        	if (Opcion) {
 		        		
 			            case 1:
 			                printf("\nNombre del estudiante:");
@@ -56,10 +61,10 @@ int main()
 			                scanf("%f", &Nota3);
 			                
 			                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
-			                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
-			                
+			                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio); //Se muestra el promedio de estudiante
+			                 
 							if (Promedio <= 3.0) {
-								printf("\ndesea dejar una recuperacion? 1/si 2/no\n");
+								printf("\ndesea dejar una recuperacion? 1/si 2/no\n"); // En caso de que el estudiante tenga una baja Nota se le puede dejar un trabajo recuperatorio
 								scanf("%i", &Opcion);
 							    switch (Opcion) {
 							    	
@@ -86,6 +91,19 @@ int main()
 		                
 		        
 					}
+					
+					else if == 2{
+					}
 			}
 		}
+		if (strcmp(User, User_Student_Preset) == 0 && strcmp(KeyWord, KeyWord_Student_Preset) == 0){ //En Caso de que el usuario y clave sea los del Alumno
+			printf("\nSistema Asis\n");
+				if (Promedio == 0){
+					printf("\nAun No se generan Notas por favor Espere o Comuniquese con su profesor\n");
+				}
+				else{
+				
+					printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
+					printf("\nSus Notas son %f", Nota1,Nota2;Nota3);
+				}
 }
