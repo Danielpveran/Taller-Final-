@@ -15,8 +15,7 @@
 #define KeyWord_Juan_Preset "0987"
 
 
-int main()
-{
+int main() {
 	char User[30];
 	char KeyWord[30];
 	char Nombre[50];
@@ -41,9 +40,8 @@ int main()
 		        printf("2. Salir\n");
 		        scanf("%i", &Opcion);
 		        
-		        	if (Opcion) {
+		        	if (Opcion == 1) {
 		        		
-			            case 1:
 			                printf("\nNombre del estudiante:");
 			                fflush(stdin);
 			                scanf("%s", &Nombre);
@@ -62,48 +60,6 @@ int main()
 			                
 			                Promedio = (Nota1 + Nota2 + Nota3) / 3.0;
 			                printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio); //Se muestra el promedio de estudiante
-			                 
-							if (Promedio <= 3.0) {
-								printf("\ndesea dejar una recuperacion? 1/si 2/no\n"); // En caso de que el estudiante tenga una baja Nota se le puede dejar un trabajo recuperatorio
-								scanf("%i", &Opcion);
-							    switch (Opcion) {
-							    	
-							    		case 1:
-							    			printf("\nIngrese el trabajo menos de 100 caracteres:");
-							                fflush(stdin);
-							                scanf("%s", &Recuperacion);
-							                
-							            case 2:
-							            	printf("\nQue tenga buen dia:");
-							            	break;
-						            	
-							}
-						}
-							
-							else
-							printf("\nQue tenga buen dia:");
-							break;
-		                
-		                case 2:
-		                	printf("\nQue tenga buen dia:");
-		                	
-		                	break;
-		                
-		        
-					}
-					
-					else if == 2{
-					}
-			}
+				}
 		}
-		if (strcmp(User, User_Student_Preset) == 0 && strcmp(KeyWord, KeyWord_Student_Preset) == 0){ //En Caso de que el usuario y clave sea los del Alumno
-			printf("\nSistema Asis\n");
-				if (Promedio == 0){
-					printf("\nAun No se generan Notas por favor Espere o Comuniquese con su profesor\n");
-				}
-				else{
-				
-					printf("\nLa Nota final de %s es de %.1f", Nombre, Promedio);
-					printf("\nSus Notas son %f", Nota1,Nota2;Nota3);
-				}
 }
