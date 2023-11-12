@@ -50,11 +50,11 @@ int main() {
 				            scanf("%f", &Nota1D);
 				                
 				            printf("Ingrese la Nota del 2 Corte:\n");
-				            fflush(stdin);
+				            
 				            scanf("%f", &Nota2D);
 				                
 				            printf("Ingrese la Nota del 3 Corte:\n");
-				            fflush(stdin);
+				            
 				            scanf("%f", &Nota3D);
 				                
 				            PromedioD = (Nota1D + Nota2D + Nota3D) / 3.0;
@@ -67,11 +67,11 @@ int main() {
 					        scanf("%f", &Nota1J);
 					                
 					        printf("Ingrese la Nota del 2 Corte:\n");
-					        fflush(stdin);
+					        
 					        scanf("%f", &Nota2J);
 					                
 					        printf("Ingrese la Nota del 3 Corte:\n");
-					        fflush(stdin);
+					        
 					        scanf("%f", &Nota3J);
 					                
 					        PromedioJ = (Nota1J + Nota2J + Nota3J) / 3.0;
